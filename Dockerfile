@@ -8,11 +8,12 @@ COPY ecosystem.config.js ecosystem.config.js
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
-RUN npm install --production && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install -y python build-essential git && \ 
     npm install -g loopback-cli --unsafe && \
-    git clone https://github.com/strongloop/loopback-getting-started.git loopback
+    git clone https://github.com/strongloop/loopback-getting-started.git loopback && \
+    CD /root/loopback && \
+    npm install --production
 
 EXPOSE 3000
 
