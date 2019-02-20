@@ -2,9 +2,12 @@ FROM keymetrics/pm2:latest-slim
 
 MAINTAINER info@aamservices.uk
 
-USER root
+USER node
+RUN mkdir /home/node/.npm-global
+ENV PATH=/home/node/.npm-global/bin:$PATH
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 
-WORKDIR /root
+WORKDIR /home/node/
 
 COPY ecosystem.config.js ecosystem.config.js
 
