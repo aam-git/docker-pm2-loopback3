@@ -12,8 +12,7 @@ RUN apt-get update && \
     apt-get install -y python build-essential git && \ 
     npm install -g loopback-cli --unsafe && \
     git clone https://github.com/strongloop/loopback-getting-started.git loopback && \
-    CD /root/loopback && \
-    npm install --production
+    npm install /root/loopback
 
 EXPOSE 3000
 
