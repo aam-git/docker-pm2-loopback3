@@ -1,5 +1,5 @@
 module.exports = {
-			apps : [{
+	apps : [{
             name: 'lb3',
 	    cwd: './loopback',
             script: 'node',
