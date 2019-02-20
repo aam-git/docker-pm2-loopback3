@@ -2,6 +2,9 @@ FROM keymetrics/pm2:latest-slim
 
 MAINTAINER info@aamservices.uk
 
+
+WORKDIR /root
+
 COPY ecosystem.config.js ecosystem.config.js
 
 ENV NPM_CONFIG_LOGLEVEL warn
