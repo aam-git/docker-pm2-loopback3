@@ -1,12 +1,7 @@
 FROM keymetrics/pm2:latest-slim
-
 MAINTAINER info@aamservices.uk
 
 WORKDIR /usr/src/app
-
-COPY ecosystem.config.js .
-
-ENV NPM_CONFIG_LOGLEVEL warn
 
 RUN apt-get update && \
     apt-get install -y python build-essential git && \ 
