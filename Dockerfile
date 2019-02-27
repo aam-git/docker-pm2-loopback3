@@ -11,8 +11,8 @@ ENV NPM_CONFIG_LOGLEVEL warn
 RUN apt-get update && \
     apt-get install -y python build-essential git && \ 
     npm install -g loopback-cli --unsafe && \
-    git clone https://github.com/strongloop/loopback-getting-started.git loopback && \
-    npm install /usr/src/app/loopback
+    git clone https://github.com/strongloop/loopback-getting-started.git . && \
+    npm install
 
 EXPOSE 3000
 
