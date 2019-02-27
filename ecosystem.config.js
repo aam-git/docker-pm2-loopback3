@@ -1,7 +1,6 @@
 module.exports = {
 	apps : [{
-            name: 'lb3',
-	    cwd: '/usr/src/app/',
+            name: 'loopback3',
             script: 'node',
             args: '.',
             exec_model: 'fork',
