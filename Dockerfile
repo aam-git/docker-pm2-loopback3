@@ -1,5 +1,5 @@
 FROM keymetrics/pm2:latest-slim
-MAINTAINER info@aamservices.uk
+LABEL maintainer="AAMServices <info@aamservices.uk>"
 
 WORKDIR /usr/src/app
 
