@@ -2,9 +2,9 @@ FROM keymetrics/pm2:latest-slim
 
 MAINTAINER info@aamservices.uk
 
-WORKDIR /root
+WORKDIR /usr/src/app
 
-COPY ecosystem.config.js ecosystem.config.js
+COPY ecosystem.config.js .
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get install -y python build-essential git && \ 
     npm install -g loopback-cli --unsafe && \
     git clone https://github.com/strongloop/loopback-getting-started.git loopback && \
-    npm install /root/loopback
+    npm install
 
 EXPOSE 3000
 
